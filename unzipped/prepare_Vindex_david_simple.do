@@ -65,12 +65,12 @@ foreach agegroup in "be40" "up40"{
 	local cen_reg_S = 100236820/`cen_US'; local cen_reg_W = 63197932/`cen_US';
 
 	*** break down by groups:;
-	else if      ("`agegroup'" == "be40")       keep if d_age < 40;
-	else if      ("`agegroup'" == "up40")       keep if d_age >= 40 & d_age ~=.;
-	else if      ("`reggroup'" == "northeast")  keep if r_d_reg_Northeast == 1;
-	else if      ("`reggroup'" == "midwest")    keep if r_d_reg_Midwest == 1;
-	else if      ("`reggroup'" == "south")      keep if r_d_reg_South == 1;
-	else if      ("`reggroup'" == "west")       keep if r_d_reg_West == 1;
+	if      ("`agegroup'" == "be40")       keep if d_age < 40;
+	if      ("`agegroup'" == "up40")       keep if d_age >= 40 & d_age ~=.;
+	if      ("`reggroup'" == "northeast")  keep if r_d_reg_Northeast == 1;
+	if      ("`reggroup'" == "midwest")    keep if r_d_reg_Midwest == 1;
+	if      ("`reggroup'" == "south")      keep if r_d_reg_South == 1;
+	if      ("`reggroup'" == "west")       keep if r_d_reg_West == 1;
 
 	#delimit cr
 	version 8
