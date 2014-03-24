@@ -34,6 +34,6 @@ foreach agegroup in "be40" "up40"{
 * Remove extraneous variables
 keep merge_id catsb*
 
-save merged_vin_data, replace
+saveold merged_vin_data, replace
 
 
